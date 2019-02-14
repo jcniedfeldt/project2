@@ -24,7 +24,18 @@ CREATE TABLE users(
     user_id INT NOT NULL,
     dest_user_id INT NOT NULL,
     post TEXT NOT NULL,
-    reactions int[] NULL,
+    -- reactions_id int NULL,
     weight FLOAT NOT NULL,
     PRIMARY KEY (id)
 );
+
+-- CREATE TABLE reactions(
+--     id AUTO_INCREMENT NOT NULL,
+--     post_time TIMESTAMP,
+--     user_id INT NOT NULL,
+--     dest_user_id INT NOT NULL,
+--     post TEXT NOT NULL,
+--     reactions_id int NULL,
+--     weight FLOAT NOT NULL,
+--     PRIMARY KEY (id)
+-- );
