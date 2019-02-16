@@ -1,12 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-  var swoleMates = sequelize.define("users", {
+  var Users = sequelize.define("users", {
     user_name: {
       type: DataTypes.STRING(30),
-      allowNull: false
-    },
-    account_created: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     first_name: {
       type: DataTypes.TEXT,
@@ -27,11 +24,7 @@ module.exports = function(sequelize, DataTypes) {
     weight: {
       type: DataTypes.STRING(30),
       allowNull: false
-    },
-    user_pass: {
-      type: DataTypes.STRING(30),
-      allowNull: false
     }
   });
-  return swoleMates;
+  return Users;
 };

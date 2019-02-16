@@ -37,11 +37,15 @@ module.exports = function(app) {
   // });
   app.get("/api/user-info/:username", function(req, res) {
     // res.render("profile");
-    db.Users.findOne({ where: { user_name: req.params.username } }).then(
-      userinfo => {
+    // console.log(db);
+    db.users
+      .findOne({ where: { user_name: req.params.username } })
+      .then(userinfo => {
         res.json(userinfo);
-      }
-    );
+      })
+      .catch(err => {
+        console.log(err);
+      });
   });
   // app.post("/api/login", function(req, res) {
   //   // res.render("profile");

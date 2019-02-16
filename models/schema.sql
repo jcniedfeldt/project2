@@ -42,7 +42,6 @@ CREATE TABLE posts(
 --     weight FLOAT NOT NULL,
 --     PRIMARY KEY (id)
 -- );
-Collapse
 
 
 
