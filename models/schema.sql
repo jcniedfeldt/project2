@@ -1,12 +1,14 @@
-DROP DATABASE IF EXISTS exampledb;
+-- DROP DATABASE IF EXISTS exampledb;
 -- CREATE DATABASE exampledb;
 
-DROP DATABASE IF EXISTS testdb;
+-- DROP DATABASE IF EXISTS testdb;
 -- CREATE DATABASE testdb;
 
-DROP DATABASE IF EXISTS fitnessapp;
-CREATE DATABASE fitnessapp;
+-- DROP DATABASE IF EXISTS fitnessapp;
+-- CREATE DATABASE fitnessapp;
+USE egqvrszrhq9iuhyx;
 
+Drop table if exists users;
 CREATE TABLE users(
     id INT AUTO_INCREMENT NOT NULL,
     account_created TIMESTAMP,
@@ -18,8 +20,9 @@ CREATE TABLE users(
     PRIMARY KEY (id)
 );
 
-CREATE TABLE users(
-    id AUTO_INCREMENT NOT NULL,
+Drop table if exists posts;
+CREATE TABLE posts(
+    id int AUTO_INCREMENT NOT NULL,
     post_time TIMESTAMP,
     user_id INT NOT NULL,
     dest_user_id INT NOT NULL,
