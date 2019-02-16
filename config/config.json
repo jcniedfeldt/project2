@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "baseball.2",
-    "database": "example_db",
+    "password": null,
+    "database": "fitnessapp",
     "host": "localhost",
     "dialect": "mysql"
   },
