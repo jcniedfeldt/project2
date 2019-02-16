@@ -1,9 +1,3 @@
--- DROP DATABASE IF EXISTS exampledb;
--- CREATE DATABASE exampledb;
-
--- DROP DATABASE IF EXISTS testdb;
--- CREATE DATABASE testdb;
-
 -- DROP DATABASE IF EXISTS fitnessapp;
 -- CREATE DATABASE fitnessapp;
 USE egqvrszrhq9iuhyx;
@@ -17,6 +11,8 @@ CREATE TABLE users(
     birthday DATE NOT NULL,
     height FLOAT NOT NULL,
     weight FLOAT NOT NULL,
+	user_name varchar(30) NOT NULL,
+    user_pass text not null,
     PRIMARY KEY (id)
 );
 
@@ -25,10 +21,9 @@ CREATE TABLE posts(
     id int AUTO_INCREMENT NOT NULL,
     post_time TIMESTAMP,
     user_id INT NOT NULL,
-    dest_user_id INT NOT NULL,
+    dest_user_id INT NULL,
     post TEXT NOT NULL,
     -- reactions_id int NULL,
-    weight FLOAT NOT NULL,
     PRIMARY KEY (id)
 );
 
