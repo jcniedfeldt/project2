@@ -15,6 +15,7 @@ module.exports = function(app) {
   // Load example page and pass in an example by id
   app.get("/home/:username", function(req, res) {
     //TODO add db call to get user information and pass to render
+
     res.render("profile.html", { username: req.params.username });
     // db.Users.findOne({ where: { username: req.params.username } }).then(
     //   function(dbExample) {
