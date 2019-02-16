@@ -38,29 +38,6 @@ module.exports = function(app) {
     res.render("contact");
   });
 
-  // ############# API ###################
-  // app.get("/api/status-updates", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/status-update", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.put("/api/status-update/:id", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.put("/api/user-info", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/login", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/signup", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/contact", function(req, res) {
-  //   // res.render("profile");
-  // });
-
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
