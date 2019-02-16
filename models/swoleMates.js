@@ -1,24 +1,24 @@
 module.exports = function (sequelize, DataTypes) {
-  var swoleMates = sequelize.define("swoleMates", {
+  var swoleMates = sequelize.define("users", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
       allowNull: false
     },
-    your_name: {
+    account_created: {
       type: DataTypes.STRING(100),
       allowNull: false
     },
-    address_name: {
+    first_name: {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    status: {
+    last_name: {
       type: DataTypes.STRING(30),
       allowNull: false
     },
-    weight: {
+    birthday: {
       type: DataTypes.STRING(30),
       allowNull: false
     },
@@ -26,16 +26,19 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING(30),
       allowNull: false
     },
-    goals: {
+    weight: {
       type: DataTypes.STRING(30),
       allowNull: false
     },
-    lastWorkout: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+    user_name: {
+      type: DataTypes.STRING(30),
+      allowNull: false
     },
-
+    user_pass: {
+      type: DataTypes.STRING(30),
+      allowNull: false
+    },
+    
   });
   return swoleMates;
 };
