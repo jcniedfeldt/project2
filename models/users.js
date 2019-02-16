@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var swoleMates = sequelize.define("users", {
     user_name: {
       type: DataTypes.STRING(30),
@@ -31,8 +31,7 @@ module.exports = function (sequelize, DataTypes) {
     user_pass: {
       type: DataTypes.STRING(30),
       allowNull: false
-    },
-    
+    }
   });
   return swoleMates;
 };
