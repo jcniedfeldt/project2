@@ -19,7 +19,7 @@ CREATE TABLE users(
 );
 
 CREATE TABLE users(
-    id AUTO_INCREMENT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     post_time TIMESTAMP,
     user_id INT NOT NULL,
     dest_user_id INT NOT NULL,
