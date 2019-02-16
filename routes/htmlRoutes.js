@@ -1,4 +1,4 @@
-var db = require("../models");
+// var db = require("../models");
 //TODO going to have to update this when we figure out the structure of the db
 module.exports = function(app) {
   // Load index page
