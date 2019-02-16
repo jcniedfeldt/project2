@@ -4,24 +4,29 @@ USE egqvrszrhq9iuhyx;
 
 Drop table if exists users;
 CREATE TABLE users(
-    id INT AUTO_INCREMENT NOT NULL,
+	user_name varchar(30) NOT NULL,
     account_created TIMESTAMP,
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,
     birthday DATE NOT NULL,
     height FLOAT NOT NULL,
     weight FLOAT NOT NULL,
-	user_name varchar(30) NOT NULL,
+    PRIMARY KEY (user_name)
+);
+
+Drop table if exists login;
+CREATE TABLE login(
+    user_name varchar(30) not null,
     user_pass text not null,
-    PRIMARY KEY (id)
+    PRIMARY KEY (user_name)
 );
 
 Drop table if exists posts;
 CREATE TABLE posts(
     id int AUTO_INCREMENT NOT NULL,
     post_time TIMESTAMP,
-    user_id INT NOT NULL,
-    dest_user_id INT NULL,
+    user_name text NOT NULL,
+    dest_user_name text NULL,
     post TEXT NOT NULL,
     -- reactions_id int NULL,
     PRIMARY KEY (id)
