@@ -4,7 +4,10 @@
     "dialect": "mysql"
   },
   "test": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": "ToweR1337!",
+    "database": "test_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
