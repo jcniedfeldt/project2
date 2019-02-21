@@ -24,7 +24,11 @@ module.exports = function(sequelize, DataTypes) {
     weight: {
       type: DataTypes.STRING(30),
       allowNull: false
-    }
+    },
+    createdAt: {type: DataTypes.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')},
+    updatedAt: {type: DataTypes.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')},
   });
   return Users;
 };

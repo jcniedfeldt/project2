@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("post", {
+  var Post = sequelize.define("posts", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -9,25 +9,22 @@ module.exports = function(sequelize, DataTypes) {
         lens: [1]
       }
     },
-    post_time: {
-      type: DataTypes.STRING(100),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    user_name: {
+    username: {
       type: DataTypes.STRING(30),
       allowNull: false
     },
-    dest_user_name: {
+    dest_username: {
       type: DataTypes.STRING(30),
-      allowNull: false
+      allowNull: true
     },
     post: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.TEXT,
       allowNull: false
-    }
+    },
+    createdAt: {type: DataTypes.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')},
+    updatedAt: {type: DataTypes.DATE,
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')},
   });
   return Post;
 };
