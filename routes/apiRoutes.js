@@ -39,7 +39,7 @@ module.exports = function(app) {
     // res.render("profile");
     // console.log(db);
     db.users
-      .findOne({ where: { user_name: req.params.username } })
+      .findOne({ where: { username: req.params.username } })
       .then(userinfo => {
         res.json(userinfo);
       })
