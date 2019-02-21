@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -12,19 +12,24 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('logins', [{
-      username: "brando_test",
-      userpass: "IRock"
-    }, {
-      username: "nlibre_test",
-      userpass: "stretchypants"
-    }, {
-      username: "brotherkisser_test",
-      userpass: "iloveluke"
-    }, {
-      username: "bigbooty_test", 
-      userpass: "youknowyoulikeit"
-    }
+    Sequelize; //TODO remove later
+    return queryInterface.bulkInsert("logins", [
+      {
+        username: "brando_test",
+        userpass: "IRock"
+      },
+      {
+        username: "nlibre_test",
+        userpass: "stretchypants"
+      },
+      {
+        username: "brotherkisser_test",
+        userpass: "iloveluke"
+      },
+      {
+        username: "bigbooty_test",
+        userpass: "youknowyoulikeit"
+      }
     ]);
   },
 
@@ -36,5 +41,7 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
+    queryInterface; //TODO remove later
+    Sequelize; //TODO remove later
   }
 };

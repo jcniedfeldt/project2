@@ -21,10 +21,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    createdAt: {type: DataTypes.DATE,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')},
-    updatedAt: {type: DataTypes.DATE,
-      defaultValue: sequelize.literal('CURRENT_TIMESTAMP')},
+    createdAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
+    }
   });
   return Post;
 };
