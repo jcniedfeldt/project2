@@ -23,6 +23,19 @@ module.exports = function (app) {
   //     res.json(dbExample);
   //   });
   // });
+  app.get("/api/status-updates", function (req, res) {
+    // res.render("profile");
+    db.posts
+      .findAll({
+        order: [['createdAt', 'DESC']]
+      })
+      .then(userposts => {
+        res.json(userposts);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
   app.get("/api/status-updates/:username", function (req, res) {
     // res.render("profile");
     db.posts

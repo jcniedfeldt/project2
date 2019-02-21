@@ -12,6 +12,18 @@ module.exports = function(app) {
     // });
   });
 
+  app.get("/home", function(req, res) {
+    //TODO add db call to get user information and pass to render
+    res.render("profile", { username: req.body.username });
+    // db.Users.findOne({ where: { username: req.params.username } }).then(
+    //   function(dbExample) {
+    //     res.render("example", {
+    //       example: dbExample
+    //     });
+    //   }
+    // );
+  });
+
   // Load example page and pass in an example by id
   app.get("/home/:username", function(req, res) {
     //TODO add db call to get user information and pass to render
