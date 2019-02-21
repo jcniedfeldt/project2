@@ -57,6 +57,16 @@ module.exports = function (app) {
       });
     // res.render("profile");
   });
+  app.delete("/api/status-update/:id", function (req, res) {
+    db.posts.destroy({ where: { id: parseInt(req.params.id) } })
+      .then(function (result) {
+        res.json(result);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    // res.render("profile");
+  });
   // app.put("/api/user-info/:username", function(req, res) {
   //   // res.render("profile");
   // });
