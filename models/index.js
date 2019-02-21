@@ -8,6 +8,8 @@ var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 
+
+
 if (config.use_env_variable) {
   console.log("Using .env variables");
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
