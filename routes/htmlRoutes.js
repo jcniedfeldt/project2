@@ -12,6 +12,18 @@ module.exports = function(app) {
     // });
   });
 
+  app.get("/home", function(req, res) {
+    //TODO add db call to get user information and pass to render
+    res.render("profile", { username: req.body.username });
+    // db.Users.findOne({ where: { username: req.params.username } }).then(
+    //   function(dbExample) {
+    //     res.render("example", {
+    //       example: dbExample
+    //     });
+    //   }
+    // );
+  });
+
   // Load example page and pass in an example by id
   app.get("/home/:username", function(req, res) {
     //TODO add db call to get user information and pass to render
@@ -37,29 +49,6 @@ module.exports = function(app) {
   app.get("/contact", function(req, res) {
     res.render("contact");
   });
-
-  // ############# API ###################
-  // app.get("/api/status-updates", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/status-update", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.put("/api/status-update/:id", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.put("/api/user-info", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/login", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/signup", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/contact", function(req, res) {
-  //   // res.render("profile");
-  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
