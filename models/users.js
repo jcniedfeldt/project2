@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var swoleMates = sequelize.define("users", {
+  var Users = sequelize.define("users", {
     user_name: {
       type: DataTypes.STRING(30),
       allowNull: false
@@ -34,5 +34,5 @@ module.exports = function (sequelize, DataTypes) {
     },
     
   });
-  return swoleMates;
+  return Users;
 };
