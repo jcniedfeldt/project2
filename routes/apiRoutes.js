@@ -32,18 +32,20 @@ module.exports = function(app) {
   //     res.json(dbExample);
   //   });
   // });
-  app.get("/api/profile", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+  // app.get("/api/profile/:username", function(req, res) {
+  //   db.users.findOne({where:{username:req.params.username}}).then(function(dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
 
-  // Create a new example
-  app.post("/api/profile", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+  // // Create a new example
+  // app.post("/api/profile/:username", function(req, res) {
+  //   //TODO verify that username in userInfo and login blocks
+  //   db.users.create(req.body.userInfo).then(function(err,user) {
+  //     if (err) res.json(err);
+  //     res.json(user);
+  //   });
+  // });
 
   // // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
@@ -69,7 +71,7 @@ module.exports = function(app) {
   app.get("/api/status-updates/:username", function(req, res) {
     // res.render("profile");
     db.posts
-      .findAll({
+      .findOne({
         where: { username: req.params.username },
         order: [["createdAt", "DESC"]]
       })
@@ -129,12 +131,33 @@ module.exports = function(app) {
         console.log(err);
       });
   });
-  // app.post("/api/login", function(req, res) {
-  //   // res.render("profile");
-  // });
-  // app.post("/api/signup", function(req, res) {
-  //   // res.render("profile");
-  // });
+  app.get("/api/logins", function(req, res) {
+    db.logins
+      .findAll({})
+      .then(logins => {
+        res.json(logins);
+      })
+      .catch(err => {
+        console.log(err);
+        res.send(404);
+      });
+    // res.render("profile");
+  });
+  app.post("/api/login", function(req, res) {
+    // res.render("profile");
+  });
+  app.post("/api/signup", function(req, res) {
+    // res.render("profile");
+    db.users
+      .create(req.body)
+      .then(function(user) {
+        res.json(user);
+      })
+      .catch(err => {
+        console.log(err);
+        res.send(404);
+      });
+  });
   // app.post("/api/contact", function(req, res) {
   //   // res.render("profile");
   // });
