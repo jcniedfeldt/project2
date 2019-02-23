@@ -56,8 +56,12 @@ module.exports = function (app) {
     // );
   });
 
-  app.get("/login", function (req, res) {
-    res.render("login");
+  app.get("/profile", function(req, res) {
+    res.render("profile");
+  });
+
+  app.get("/login", function(req, res) {
+    res.render("profile");
   });
   app.post("/login", passport.authenticate('local', {
     successRedirect: '/',
