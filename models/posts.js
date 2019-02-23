@@ -1,28 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
-  var Users = sequelize.define("users", {
+  var Post = sequelize.define("posts", {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+      allowNull: false,
+      validate: {
+        lens: [1]
+      }
+    },
     username: {
       type: DataTypes.STRING(30),
-      allowNull: false,
-      primaryKey: true
+      allowNull: false
     },
-    first_name: {
+    dest_username: {
+      type: DataTypes.STRING(30),
+      allowNull: true
+    },
+    post: {
       type: DataTypes.TEXT,
-      allowNull: false
-    },
-    last_name: {
-      type: DataTypes.STRING(30),
-      allowNull: false
-    },
-    birthday: {
-      type: DataTypes.STRING(30),
-      allowNull: false
-    },
-    height: {
-      type: DataTypes.STRING(30),
-      allowNull: false
-    },
-    weight: {
-      type: DataTypes.STRING(30),
       allowNull: false
     },
     createdAt: {
@@ -34,5 +30,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     }
   });
-  return Users;
+  return Post;
 };
