@@ -125,9 +125,9 @@ module.exports = function(app) {
       });
     // res.render("profile");
   });
-  app.post("/api/login", function(req, res) {
-    // res.render("profile");
-  });
+  // app.post("/api/login", function(req, res) {
+  //   // res.render("profile");
+  // });
   app.post("/api/signup", function(req, res) {
     // res.render("profile");
     db.users
