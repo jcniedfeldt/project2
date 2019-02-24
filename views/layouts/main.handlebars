@@ -6,7 +6,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
   <link rel="SHORTCUT ICON" href="favicon.ico" />
   <title>Swole Patrol</title>
 </head>
@@ -14,13 +15,13 @@
 
 <body>
   {{!-- Navbar --}}
-  <nav class="light-blue darken-4" role="navigation">
+  <nav class="blue-grey darken-3" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo white-text">Swole Patrol</a>
+      <a id="logo-container" href="#">Swolemates</a>
       <ul class="right hide-on-med-and-down">
-        <a class="waves-effect waves-light btn-small">Contact Us</a>
-        <li><a href="#" class="white-text">Home</a></li>
-        <li><a href="#" class="white-text">My Profile</a></li>
+        <a class="waves-effect waves-light btn-small" href="/contact">Contact Us</a>
+        <li><a href="/" class="white-text">Home</a></li>
+        <li><a href="/profile" class="white-text">My Profile</a></li>
 
 
       </ul>
@@ -36,10 +37,11 @@
   {{{body}}}
 
 
-  <footer class="page-footer grey">
+  <footer class="page-footer blue-grey darken-3">
     <div class="footer-copyright">
-      <div class="container">
-        Made by the Swole Patrol <a class="material-icons prefix" class="black-text cyan darken-4" target="_blank"
+      <div class="container" id="gitLinks">
+        Made by the Swole Patrol
+        <a class="material-icons prefix" class="black-text cyan darken-4" target="_blank"
           href="https://github.com/Tygabomb">album</a> | <a class="material-icons prefix"
           class="black-text cyan darken-4" target="_blank" href="https://github.com/jcniedfeldt">lock</a> | <a
           class="material-icons prefix" class="black-text cyan darken-4" target="_blank"

@@ -1,3 +1,7 @@
+body {
+  background-color: #d9d9d9;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -9,20 +13,63 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
+  text-align: center;
 }
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: blue;
+  width: 100%;
 }
+
 
 .parallax-container .section {
   width: 100%;
   text-align: center;
 }
 
+.footer {
+  position: fixed;
+}
+
+#sign_up {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#logo-container {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  color: #ffd699
+}
+
+#mainTitle {
+  margin-top: 150px;
+  font-size: 30px;
+}
+
+#articleOne {
+  border-radius: 10px;
+}
+
+#gitLinks {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+span {
+  font-family: 'Permanent Marker', cursive;
+}
+
+#articles {
+  background-color: #e6e6e6;
+  margin-bottom: 100px;
+  border-radius: 10px;
+}
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -58,7 +105,6 @@ main {
   flex: 1 0 auto;
 };
 
-#id_email{
-padding: 3px 48px 0px 48px;
 
-}
+
+
