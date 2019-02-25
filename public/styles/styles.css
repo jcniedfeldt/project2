@@ -14,6 +14,8 @@ nav .brand-logo {
 p {
   line-height: 2rem;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
+font-size: 30px;
 }
 
 .parallax-container {
@@ -70,11 +72,7 @@ span {
   width: 100%;
 }
 
-#profilePic {
-  width: 90%;
-  margin: auto;
-  margin-top: 30px;
-}
+
 
 #profileCard {
   margin-top: 100px;
@@ -120,14 +118,24 @@ span {
 }
 
 #profilePic {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-}
-
-#status {
+  margin-left: 55px;
+  margin-bottom: 30px;
   margin-top: 30px;
 }
+
+#statusUpdate {
+  margin-top: 20px;
+  width: 95%;
+}
+
+#statusUpdate {
+  margin-top: 50px;
+  width: 95%;
+}
+
 
 #contactTitle {
   margin-left: 50px;
@@ -140,6 +148,7 @@ span {
   width: 55%;
   margin-top: 50px;
 }
+
 
 #contactText {
   width: 90%;
