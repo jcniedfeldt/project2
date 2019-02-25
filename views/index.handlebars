@@ -6,20 +6,24 @@
       <br><br>
       <div class="row">
         <div class="col s6">
-          <h1 class="header center blue-text text-lighten-2">Your next great pump is near.</h1>
+          <h5 class="header col s12 light white-text" id="mainTitle">The struggles of partnerless gym sessions are no more, Sign up
+            today.</h5>
+
           <div class="row center">
-            <h5 class="header col s12 light">The struggles of partnerless gym sessions are no more, Sign up today.</h5>
           </div>
         </div>
         <div class="col s6">
           <div class="container">
-            <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE">
+            <div class="z-depth-1 grey lighten-4 row"
+              style="display: inline-block; padding: 32px 32px 32px 32px; border:orange solid 2px; border-radius: 5px;">
 
               <form class="col s12" method="post">
                 <div class='row'>
                   <div class='col s12'>
                   </div>
                 </div>
+
+                <img class="parallax" src="assets/img/mainpage.jpg">
 
                 {{!-- <div class="wrap">
                   <div class="mat-div">
@@ -28,147 +32,154 @@
                   </div> --}}
 
 
-                  {{!-- <div class='row'>
+                {{!-- <div class='row'>
                     <div class='input-field col s12'>
                       <input type='text' id='email' />
                       <label for='email'>Email </label>
                     </div>
                   </div> --}}
 
-                  <div class="input-field col s12 ">
-                    <i class="material-icons prefix">accessibility</i>
-                    <input id="id_email" name="email" type="text">
-                    <label for="id_email" class="active">Email</label>
-                  </div>
+                <div class="input-field col s12 ">
+                  <i class="material-icons prefix">accessibility</i>
+                  <input id="id_email" name="email" type="text">
+                  <label for="id_email" class="active">Email</label>
+                </div>
 
-                  <div class="input-field col s12 ">
-                    <i class="material-icons prefix">lock</i>
-                    <input id="id_password" name="password" type="password">
-                    <label for="id_password" class="active">Password</label>
-                  </div>
+                <div class="input-field col s12 ">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="id_password" name="password" type="password">
+                  <label for="id_password" class="active">Password</label>
+                </div>
 
-                  {{!--
+                {{!--
                   <div class='row'>
                     <div class='input-field col s12'>
                       <input class='validate' type='password' name='password' id='password' />
                       <label for='password'>Enter your password</label>
                     </div> --}}
-                    
-                    <label style='float: right;'>
-                      <a class='blue-text' href='#!'><b>Create Account</b></a>
-                      <a class='black-text'><b>/</b></a>
-                      <a class='green-text' href='404.handlebars'><b>Forgot Password?</b></a>
-                    </label>
-                  </div>
 
-                  <br />
-                  <center>
-                    <div class='row'>
-                      <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect green darken-3'>Login</button>
-                    </div>
-                  </center>
-              </form>
-              </div>
+                <label style='float: right;'>
+                  <a class='blue-text' href='/signup'><b>Create Account</b></a>
+                  <a class='black-text'><b>/</b></a>
+                  <a class='green-text' href='404.handlebars'><b>Forgot Password?</b></a>
+                </label>
             </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login'
+                  class='col s12 btn btn-large waves-effect green darken-3'>Login</button>
+              </div>
             </center>
+            </form>
           </div>
         </div>
+        </center>
       </div>
-      <br><br>
     </div>
   </div>
+  <br><br>
+</div>
+</div>
 
-  {{!-- Membership Benefits Section --}}
-  <div class="container">
-    <div class="section">
+{{!-- Membership Benefits Section --}}
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="medium material-icons">child_care</i></h2>
+          <h5 class="center">Great way to meet new friends!</h5>
+
+          <p class="light">
+           Share your fitness routines and make new gym buddys! Plan sessions and never be without a spotter ever again!
+          </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class=" medium material-icons">fitness_center</i></h2>
+          <h5 class="center">Keep track of your progress and personal bests!</h5>
+
+          <p class="light">Keep track of your stats and compare with your friends. See your growth progress and track
+            your goals!.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="medium material-icons">people</i></h2>
+          <h5 class="center">Communicate with other fitness enthusiasts</h5>
+
+          <p class="light">Talk to other like minded fit individuals like yourself. With a common goal you'll have more in common like Nutrition and Supplements!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{{!-- Recommended Articles --}}
+<div class="container" id="articles">
+  <div class="section">
+    <div class="row">
       <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center blue-text"><i class="medium material-icons">child_care</i></h2>
-            <h5 class="center">Great way to meet new friends!</h5>
-
-            <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tellus eget purus
-              pulvinar, eget consectetur ex elementum. Nulla eget sem id felis accumsan imperdiet vel condimentum libero.
-            </p>
+        <div class="col s12">
+          <div class="card blue-grey" id="articleOne">
+            <div class="card-image">
+              <img src="https://i.imgur.com/KRxMk4s.jpg">
+              <span class="card-title">5 CrossFit WODs Every Bodybuilder Should Try</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light green"
+                href="https://www.bodybuilding.com/content/5-crossfit-wods-every-bodybuilder-should-try.html"><i
+                  class="material-icons">keyboard_arrow_right</i></a>
+            </div>
+            <div class="card-content white-text">
+              <p>Ready to bury the hatchet? Do it by giving these five popular WODs (Workout of the Day) a try. They all
+                bridge the divide between aesthetics and functionality, and honestly, may actually help with your gains.
+              </p>
+            </div>
           </div>
         </div>
+        <div class="col s6" id="articleTwo">
+          <div class="card blue-grey">
+            <div class="card-image">
+              <img src="https://i.imgur.com/AbJuecV.jpg">
+              <span class="card-title black-text">Exercise And Your Heart</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"
+                href="https://www.bodybuilding.com/content/the-surprising-way-exercise-helps-your-heart.html"><i
+                  class="material-icons">keyboard_arrow_right</i></a>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center blue-text"><i class=" medium material-icons">fitness_center</i></h2>
-            <h5 class="center">Keep track of your progress and personal bests!</h5>
-
-            <p class="light">Cras varius, augue a interdum porta, nunc est porta nibh, et pellentesque nulla magna vitae
-              nunc. Ut tempus finibus convallis. Ut interdum finibus orci.</p>
+            </div>
+            <div class="card-content white-text">
+              <p>You always knew running was good for your heart, but how good? Running can have far more benefits than
+                just melting fat, Find out what other great things strapping on the old running shoes and hitting the
+                pavement
+                can bring.</p>
+            </div>
           </div>
         </div>
+        <div class="col s6" id="articleThree">
+          <div class="card blue-grey">
+            <div class="card-image">
+              <img src="https://i.imgur.com/FnmNwpJ.jpg">
+              <span class="card-title">Beginner's Guide</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light blue"
+                href="https://www.bodybuilding.com/content/the-ultimate-beginners-full-body-workout.html"><i
+                  class="material-icons">keyboard_arrow_right</i></a>
+            </div>
+            <div class="card-content white-text">
+              <p>This is a very simple beginner's full body workout to get you started on your fitness journey strong.
+              </p>
+            </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center blue-text"><i class="medium material-icons">people</i></h2>
-            <h5 class="center">Communicate with other fitness enthusiasts</h5>
-
-            <p class="light">Proin bibendum lectus at libero sollicitudin, vel placerat metus lacinia. Aenean id arcu blandit,
-              consequat tortor sed, blandit arcu. Cras pellentesque elit risus, eu viverra ligula dignissim sit amet. </p>
           </div>
         </div>
       </div>
 
     </div>
+
   </div>
+</div>
 
-  {{!-- Recommended Articles --}}
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://i.imgur.com/KRxMk4s.jpg">
-                <span class="card-title">5 CrossFit WODs Every Bodybuilder Should Try</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light green" href="https://www.bodybuilding.com/content/5-crossfit-wods-every-bodybuilder-should-try.html"><i
-                    class="material-icons">keyboard_arrow_right</i></a>
-              </div>
-              <div class="card-content">
-                <p>Ready to bury the hatchet? Do it by giving these five popular WODs (Workout of the Day) a try. They all
-                  bridge the divide between aesthetics and functionality, and honestly, may actually help with your gains.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6" id="subArticleOne">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://i.imgur.com/AbJuecV.jpg">
-                <span class="card-title black-text">Exercize And Your Heart</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red" href="https://www.bodybuilding.com/content/the-surprising-way-exercise-helps-your-heart.html"><i
-                    class="material-icons">keyboard_arrow_right</i></a>
-
-              </div>
-              <div class="card-content">
-                <p>You always knew running was good for your heart, but how good? Running can have far more benefits than
-                  just melting fat, Find out what other great things strapping on the old running shoes and hitting the pavement
-                  can bring.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6" id="subArticleTwo">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://i.imgur.com/FnmNwpJ.jpg">
-                <span class="card-title">Beginner's Guide</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light blue" href="https://www.bodybuilding.com/content/the-ultimate-beginners-full-body-workout.html"><i
-                    class="material-icons">keyboard_arrow_right</i></a>
-              </div>
-              <div class="card-content">
-                <p>This is a very simple beginner's full body workout to get you started on your fitness journey strong.</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
