@@ -2,8 +2,7 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 var db = require("./models");
-var passport = require('passport')
-, LocalStrategy = require('passport-local').Strategy;
+var passport = require('passport');
 
 var session = require("express-session"),
     bodyParser = require("body-parser");
@@ -18,7 +17,7 @@ app.use(express.static("public"));
 
 // Passport Middleware
 app.use(express.static("public"));
-app.use(session({ secret: "cats" }));
+app.use(session({ secret: "fitnessApp" }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(passport.initialize());
 app.use(passport.session());
