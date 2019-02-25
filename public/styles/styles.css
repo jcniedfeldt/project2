@@ -23,7 +23,6 @@ p {
   width: 100%;
 }
 
-
 .parallax-container .section {
   width: 100%;
   text-align: center;
@@ -40,9 +39,9 @@ p {
 }
 
 #logo-container {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 40px;
-  color: #ffd699
+  color: #ffd699;
 }
 
 #mainTitle {
@@ -57,12 +56,11 @@ p {
 #gitLinks {
   text-align: center;
   font-size: 25px;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
-
 span {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 #articles {
@@ -86,13 +84,13 @@ span {
   width: 100%;
 }
 
-  #profile {
-border-radius: 5px;
-  }
+#profile {
+  border-radius: 5px;
+}
 
-  .form-group {
-    margin-top: 50px;
-  }
+.form-group {
+  margin-top: 50px;
+}
 
 .posts {
   clear: both;
@@ -118,8 +116,7 @@ border-radius: 5px;
   margin-top: 20px;
   text-align: center;
   font-size: 20px;
-  font-family: 'Permanent Marker', cursive;
-
+  font-family: "Permanent Marker", cursive;
 }
 
 #profilePic {
@@ -132,8 +129,23 @@ border-radius: 5px;
   margin-top: 30px;
 }
 
+#contactTitle {
+  margin-left: 50px;
+  margin-top: 50px;
+  font-size: 30px;
+}
 
-@media only screen and (max-width : 992px) {
+#contactUs {
+  margin-bottom: 120px;
+  width: 55%;
+  margin-top: 50px;
+}
+
+#contactText {
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (max-width: 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
@@ -144,7 +156,7 @@ border-radius: 5px;
   }
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width: 600px) {
   #index-banner .section {
     top: 0;
   }
@@ -166,8 +178,4 @@ body {
 
 main {
   flex: 1 0 auto;
-};
-
-
-
-
+}
