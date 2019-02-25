@@ -15,21 +15,23 @@ $(document).ready(function() {
   function handleAuthorFormSubmit(event) {
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
-    if (!nameInput.val().trim().trim()) {
+    if (
+      !nameInput
+        .val()
+        .trim()
+        .trim()
+    ) {
       return;
     }
     // Calling the upsertAuthor function and passing in the value of the name input
     upsertAuthor({
-      name: nameInput
-        .val()
-        .trim()
+      name: nameInput.val().trim()
     });
   }
 
   // A function for creating an author. Calls getAuthors upon completion
   function upsertAuthor(authorData) {
-    $.post("/api/authors", authorData)
-      .then(getAuthors);
+    $.post("/api/authors", authorData).then(getAuthors);
   }
 
   // Function for creating a new list row for authors
@@ -38,10 +40,20 @@ $(document).ready(function() {
     var newTr = $("<tr>");
     newTr.data("author", authorData);
     newTr.append("<td>" + authorData.name + "</td>");
-    newTr.append("<td># of posts will display when we learn joins in the next activity!</td>");
-    newTr.append("<td><a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a></td>");
-    newTr.append("<td><a href='/cms?author_id=" + authorData.id + "'>Create a Post</a></td>");
-    newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>");
+    newTr.append(
+      "<td># of posts will display when we learn joins in the next activity!</td>"
+    );
+    newTr.append(
+      "<td><a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a></td>"
+    );
+    newTr.append(
+      "<td><a href='/cms?author_id=" +
+        authorData.id +
+        "'>Create a Post</a></td>"
+    );
+    newTr.append(
+      "<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>"
+    );
     return newTr;
   }
 
@@ -59,13 +71,15 @@ $(document).ready(function() {
 
   // A function for rendering the list of authors to the page
   function renderAuthorList(rows) {
-    authorList.children().not(":last").remove();
+    authorList
+      .children()
+      .not(":last")
+      .remove();
     authorContainer.children(".alert").remove();
     if (rows.length) {
       console.log(rows);
       authorList.prepend(rows);
-    }
-    else {
+    } else {
       renderEmpty();
     }
   }
@@ -80,12 +94,14 @@ $(document).ready(function() {
 
   // Function for handling what happens when the delete button is pressed
   function handleDeleteButtonPress() {
-    var listItemData = $(this).parent("td").parent("tr").data("author");
+    var listItemData = $(this)
+      .parent("td")
+      .parent("tr")
+      .data("author");
     var id = listItemData.id;
     $.ajax({
       method: "DELETE",
       url: "/api/authors/" + id
-    })
-      .then(getAuthors);
+    }).then(getAuthors);
   }
 });
