@@ -14,8 +14,7 @@ nav .brand-logo {
 p {
   line-height: 2rem;
   text-align: center;
-  font-family: 'Permanent Marker', cursive;
-font-size: 30px;
+font-size: 20px;
 }
 
 .parallax-container {
@@ -34,11 +33,6 @@ font-size: 30px;
   position: fixed;
 }
 
-#sign_up {
-  width: 80%;
-  margin: auto;
-  margin-top: 30px;
-}
 
 #logo-container {
   font-family: "Permanent Marker", cursive;
@@ -135,6 +129,25 @@ span {
   margin-top: 50px;
   width: 95%;
 }
+
+#signUp {
+  width: 60%;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  text-align: center;
+  background-color: #ffb84d; 
+  border-radius: 10px;
+}
+
+#signUpTitle {
+  margin-left: 490px;
+  margin-top: 200px;
+}
+
+#signUpInput {
+  margin-top: 0px;
+}
+
 
 
 #contactTitle {
