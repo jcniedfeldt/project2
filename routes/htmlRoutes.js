@@ -1,4 +1,4 @@
-// var db = require("../models");
+var db = require("../models");
 //TODO going to have to update this when we figure out the structure of the db
 module.exports = function(app) {
   // Load index page
@@ -38,7 +38,15 @@ module.exports = function(app) {
   });
 
   app.get("/profile", function(req, res) {
-    res.render("profile");
+    db.users.findOne({where:{username:"nlibre_test"}})
+      .then(result=>{
+        console.log(result.username);
+        userInfo={userName:result.username},
+        
+        res.render("profile",userInfo);
+      }).catch(err=>{
+        res.send(404);
+      })
   });
 
   app.get("/login", function(req, res) {
