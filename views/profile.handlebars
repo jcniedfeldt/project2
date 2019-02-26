@@ -34,12 +34,12 @@
       <div class="col s12 m12">
         <div class="card-panel blue-grey -3">
           <p>
-            <strong> {{first_name}} </strong></p>
+            <strong> {{userInfo.first_name}} </strong></p>
 
           <p>
-            <strong> {{userName}} <strong></p>
+            <strong> {{userInfo.userName}} <strong></p>
           <p>
-            <strong>  {{last_name}} </strong></p>
+            <strong>  {{userInfo.last_name}} </strong></p>
         </div>
       </div>
     </div>
@@ -53,6 +53,9 @@
         <div class="col s12 m12">
           <div class="card-panel blue-grey darken-3">
             <ul class="posts">
+              {{#each posts}}
+                {{> posts}}
+              {{/each}}
             </ul>
           </div>
         </div>

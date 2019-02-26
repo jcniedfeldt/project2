@@ -40,10 +40,20 @@ module.exports = function(app) {
   app.get("/profile", function(req, res) {
     db.users.findOne({where:{username:"nlibre_test"}})
       .then(result=>{
-        console.log(result.username);
-        userInfo={userName:result.username},
+        // console.log(result.username);
+        userInfo={username:result.username,
+          first_name:result.first_name,
+          last_name:result.last_name,
+          email:result.email,
+          birthday:result.birthday,
+          height:result.height,
+          weight:result.weight
+        };
+        db.posts.findAll({where:{username:userInfo.username}})
+        .then(posts=>{
+          res.render("profile",{userInfo:userInfo,posts:posts});  
+        });
         
-        res.render("profile",userInfo);
       }).catch(err=>{
         res.send(404);
       })
