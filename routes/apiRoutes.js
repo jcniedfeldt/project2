@@ -82,6 +82,11 @@ module.exports = function(app) {
         console.log(err);
       });
   });
+  app.get('/flash', function(req, res){
+    // Set a flash message by passing the key, followed by the value, to req.flash().
+    req.flash('error', 'Flash is back!')
+    res.redirect('/');
+  });
   app.post("/api/status-update", function(req, res) {
     db.posts
       .create(req.body)

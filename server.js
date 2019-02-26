@@ -3,6 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var db = require("./models");
 var passport = require('passport');
+var flash = require('connect-flash');
 
 var session = require("express-session"),
     bodyParser = require("body-parser");
@@ -15,7 +16,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// Passport Middleware
+// Passport and flash Middleware
+app.use(flash());
 app.use(express.static("public"));
 app.use(session({ secret: "fitnessApp" }));
 app.use(bodyParser.urlencoded({ extended: false }));

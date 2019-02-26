@@ -22,6 +22,7 @@ passport.use(new LocalStrategy(
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
+    
     res.render("index");
     // db.Example.findAll({}).then(function(dbExamples) {
     //   res.render("index", {
@@ -33,6 +34,7 @@ module.exports = function (app) {
 
   app.get("/home", function (req, res) {
     //TODO add db call to get user information and pass to render
+
     res.render("profile", { username: req.body.username });
     // db.Users.findOne({ where: { username: req.params.username } }).then(
     //   function(dbExample) {
@@ -67,7 +69,7 @@ module.exports = function (app) {
     res.render("profile");
   });
   app.post("/login", passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/profile',
     failureRedirect: '/login',
     failureFlash: true
   }));
