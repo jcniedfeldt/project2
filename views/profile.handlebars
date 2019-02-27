@@ -11,7 +11,6 @@
             <img class="parallax" src="/assets/img/swolemates.jpg">
 
           </div>
-
         </div>
       </div>
     </div>
@@ -19,87 +18,90 @@
 </div>
 
 
-   <div class="row" id="mainProfile">
-      <div class="col s5 push-s7">
-  <div class="row">
-    <div class="col s12 m12">
-      <div class="card-panel blue-grey darken-2">
-        <img src="https://i.imgflip.com/2s4z0k.png" id="profilePic">
+<div class="row" id="mainProfile">
+  <div class="col s5 push-s7">
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card-panel blue-grey darken-2">
+          <img src="https://i.imgflip.com/2s4z0k.png" id="profilePic">
+        </div>
       </div>
     </div>
+
   </div>
-         
-      </div>
-      <div class="col s7 pull-s5">
-  <div class="row">
-    <div class="col s12 m12">
-      <div class="card-panel blue-grey darken-3">
-             <p>
-          <strong> Placeholder </strong> {{exapmle.id}}</p>
-        <p>
+  <div class="col s7 pull-s5">
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card-panel blue-grey -3">
           <p>
-            <strong> 2nd Placeholder 🤯 </strong> {{example.text}}</p>
+            <strong> {{userInfo.first_name}} </strong></p>
+
           <p>
-            <strong> 3rd Placeholder 🤖 </strong> {{example.description}}</p>
+            <strong> {{userInfo.userName}} <strong></p>
+          <p>
+            <strong>  {{userInfo.last_name}} </strong></p>
+        </div>
       </div>
     </div>
+
   </div>
-         
-      </div>
-    </div>
+</div>
 
 {{!-- post status --}}
- <div class="row" id="statusUpdate">
-      <div class="col s7 push-s5"><span class="flow-text"> <div class="row">
-    <div class="col s12 m12">
-      <div class="card-panel blue-grey darken-3">
-       <ul class="posts">
+<div class="row" id="statusUpdate">
+  <div class="col s7 push-s5"><span class="flow-text"> <div class="row">
+        <div class="col s12 m12">
+          <div class="card-panel blue-grey darken-3">
+            <ul class="posts">
+              {{#each posts}}
+                {{> posts}}
+              {{/each}}
             </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-        </span></div>
-      <div class="col s5 pull-s7"><span class="flow-text"> <div class="row">
-    <div class="col s12 m12">
-      <div class="card-panel blue-grey darken-2">
-        <span class="white-text">
-           <div class="row">
-    <div class="col s12 m12">
-     <div class="container">
-              <form>
-                <div class="form-group">
-                  <input class="form-control status-box" rows="2" placeholder="Write something on my wall!"></input>
+    </span></div>
+  <div class="col s5 pull-s7"><span class="flow-text"> <div class="row">
+        <div class="col s12 m12">
+          <div class="card-panel blue-grey darken-2">
+            <span class="white-text">
+              <div class="row">
+                <div class="col s12 m12">
+                  <div class="container">
+                    <form>
+                      <div class="form-group">
+                        <input class="form-control status-box" rows="2" placeholder="Write something on my wall!"></input>
+                      </div>
+                    </form>
+                    <div class="button-group pull-right">
+                      <p class="counter">140</p>
+                      <a href="#" class="btn btn-primary">POST</a>
+
+                    </div>
+
+                  </div>
                 </div>
-              </form>
-              <div class="button-group pull-right">
-                <p class="counter">140</p>
-                <a href="#" class="btn btn-primary">POST</a>
-
               </div>
-
-            </div>
-    </div>
-  </div>
-        </span>
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-        </span></div>
-    </div>
+    </span></div>
+</div>
 
-    {{!--  --}}
+{{!-- --}}
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/public/js/main.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/public/js/main.js"></script>
 
-    <div class="col s12">
-      
+<div class="col s12">
 
 
 
-    </div>
 
-  </div>
+</div>
+
+</div>
 
 </div>
 </div>
